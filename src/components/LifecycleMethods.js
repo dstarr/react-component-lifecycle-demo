@@ -21,7 +21,9 @@ class LifecycleMethods extends React.Component {
 
     componentWillUnmount = () => { console.log('componentWillUnmount'); };
 
-    componentDidCatch = () => { console.log('componentDidCatch'); };
+    componentDidCatch = (error, errorInfo) => { console.log('componentDidCatch'); };
+
+    // shouldComponentUpdate = () => { console.log('shouldComponentUpdate'); return false; };
 
     render = () => {
 
