@@ -5,7 +5,6 @@ class LifecycleMethods extends React.Component {
 
     constructor(props) {
         super(props);
-
         console.log('constructor');
     }
 
