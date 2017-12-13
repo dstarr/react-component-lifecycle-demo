@@ -1,6 +1,4 @@
 const path = require('path');
-//const webpack = require('webpack');
-//const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const dist = path.join(__dirname, 'dist');
 
@@ -41,6 +39,6 @@ module.exports = {
         ]
     },
     plugins: [
-        //new UglifyJSPlugin()
+
     ]
 };

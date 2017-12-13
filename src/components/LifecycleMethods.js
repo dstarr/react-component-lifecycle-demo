@@ -6,10 +6,6 @@ class LifecycleMethods extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            textToRender: this.props.text
-        };
-
         console.log('constructor');
     }
 
@@ -18,11 +14,6 @@ class LifecycleMethods extends React.Component {
     componentDidMount = () => { console.log('componentDidMount'); };
 
     componentWillReceiveProps = () => { console.log('componentWillReceiveProps'); };
-
-    shouldComponentUpdate = () => {
-        console.log('shouldComponentUpdate');
-        return false;
-    };
 
     componentWillUpdate = () => { console.log('componentWillUpdate'); };
 
@@ -38,22 +29,10 @@ class LifecycleMethods extends React.Component {
 
         return (
             <div>
-                <h1>{this.state.textToRender}</h1>
-                <button onClick={this.handleUpdatingState}>Update State</button>
-                <button onClick={this.nullMe}>Null Me</button>
+                <h1>{this.props.text}</h1>
             </div>
         );
     };
-
-    handleUpdatingState = () => {
-        this.setState({
-            textToRender: 'Updated the state'
-        })
-    };
-
-    nullMe = () => {
-
-    }
 }
 
 LifecycleMethods.PropTypes = {
